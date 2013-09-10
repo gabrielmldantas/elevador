@@ -1,0 +1,10 @@
+
+State Machine - |elevador|pr_andar
+Name pr_andar.andar6 pr_andar.andar5 pr_andar.andar4 pr_andar.andar3 pr_andar.andar2 pr_andar.andar1 pr_andar.andar0 
+pr_andar.andar0 0 0 0 0 0 0 0 
+pr_andar.andar1 0 0 0 0 0 1 1 
+pr_andar.andar2 0 0 0 0 1 0 1 
+pr_andar.andar3 0 0 0 1 0 0 1 
+pr_andar.andar4 0 0 1 0 0 0 1 
+pr_andar.andar5 0 1 0 0 0 0 1 
+pr_andar.andar6 1 0 0 0 0 0 1 

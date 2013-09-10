@@ -1,0 +1,592 @@
+Simulator report for elevador
+Mon Sep 09 17:43:14 2013
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 ns     ;
+; Simulation Netlist Size     ; 223 nodes    ;
+; Simulation Coverage         ;       4.48 % ;
+; Total Number of Transitions ; 77           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                              ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                           ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                 ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                  ;               ;
+; Vector input source                                                                        ; Y:/Dropbox/Lab. CD II/Praticas/elevador/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                   ; On            ;
+; Check outputs                                                                              ; Off                                                  ; Off           ;
+; Report simulation coverage                                                                 ; On                                                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                  ; Off           ;
+; Detect glitches                                                                            ; Off                                                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                  ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                 ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       4.48 % ;
+; Total nodes checked                                 ; 223          ;
+; Total output ports checked                          ; 223          ;
+; Total output ports with complete 1/0-value coverage ; 10           ;
+; Total output ports with no 1/0-value coverage       ; 207          ;
+; Total output ports with no 1-value coverage         ; 213          ;
+; Total output ports with no 0-value coverage         ; 207          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                          ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |elevador|next_andar~2  ; |elevador|next_andar~2  ; out              ;
+; |elevador|next_andar~15 ; |elevador|next_andar~15 ; out              ;
+; |elevador|next_andar~28 ; |elevador|next_andar~28 ; out              ;
+; |elevador|next_andar~55 ; |elevador|next_andar~55 ; out              ;
+; |elevador|next_andar~68 ; |elevador|next_andar~68 ; out              ;
+; |elevador|next_andar~81 ; |elevador|next_andar~81 ; out              ;
+; |elevador|call.andar3   ; |elevador|call.andar3   ; out              ;
+; |elevador|clk           ; |elevador|clk           ; out              ;
+; |elevador|pr_andar~0    ; |elevador|pr_andar~0    ; out0             ;
+; |elevador|pr_andar~5    ; |elevador|pr_andar~5    ; out0             ;
++-------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |elevador|pr_andar.andar0    ; |elevador|pr_andar.andar0    ; regout           ;
+; |elevador|pr_andar.andar1    ; |elevador|pr_andar.andar1    ; regout           ;
+; |elevador|pr_andar.andar2    ; |elevador|pr_andar.andar2    ; regout           ;
+; |elevador|pr_andar.andar3    ; |elevador|pr_andar.andar3    ; regout           ;
+; |elevador|pr_andar.andar4    ; |elevador|pr_andar.andar4    ; regout           ;
+; |elevador|pr_andar.andar5    ; |elevador|pr_andar.andar5    ; regout           ;
+; |elevador|next_andar~0       ; |elevador|next_andar~0       ; out              ;
+; |elevador|next_andar~1       ; |elevador|next_andar~1       ; out              ;
+; |elevador|next_andar~3       ; |elevador|next_andar~3       ; out              ;
+; |elevador|next_andar~4       ; |elevador|next_andar~4       ; out              ;
+; |elevador|next_andar~5       ; |elevador|next_andar~5       ; out              ;
+; |elevador|next_andar~6       ; |elevador|next_andar~6       ; out              ;
+; |elevador|next_andar~7       ; |elevador|next_andar~7       ; out              ;
+; |elevador|next_andar~8       ; |elevador|next_andar~8       ; out              ;
+; |elevador|next_andar~9       ; |elevador|next_andar~9       ; out              ;
+; |elevador|next_andar~10      ; |elevador|next_andar~10      ; out              ;
+; |elevador|next_andar~11      ; |elevador|next_andar~11      ; out              ;
+; |elevador|next_andar~12      ; |elevador|next_andar~12      ; out              ;
+; |elevador|pr_andar.andar6    ; |elevador|pr_andar.andar6    ; regout           ;
+; |elevador|y~0                ; |elevador|y~0                ; out              ;
+; |elevador|next_andar~13      ; |elevador|next_andar~13      ; out              ;
+; |elevador|next_andar~14      ; |elevador|next_andar~14      ; out              ;
+; |elevador|next_andar~16      ; |elevador|next_andar~16      ; out              ;
+; |elevador|next_andar~17      ; |elevador|next_andar~17      ; out              ;
+; |elevador|next_andar~18      ; |elevador|next_andar~18      ; out              ;
+; |elevador|next_andar~19      ; |elevador|next_andar~19      ; out              ;
+; |elevador|next_andar~20      ; |elevador|next_andar~20      ; out              ;
+; |elevador|next_andar~21      ; |elevador|next_andar~21      ; out              ;
+; |elevador|next_andar~22      ; |elevador|next_andar~22      ; out              ;
+; |elevador|next_andar~23      ; |elevador|next_andar~23      ; out              ;
+; |elevador|next_andar~24      ; |elevador|next_andar~24      ; out              ;
+; |elevador|next_andar~25      ; |elevador|next_andar~25      ; out              ;
+; |elevador|y[1]$latch         ; |elevador|y[1]$latch         ; out              ;
+; |elevador|next_andar~26      ; |elevador|next_andar~26      ; out              ;
+; |elevador|next_andar~27      ; |elevador|next_andar~27      ; out              ;
+; |elevador|next_andar~29      ; |elevador|next_andar~29      ; out              ;
+; |elevador|next_andar~30      ; |elevador|next_andar~30      ; out              ;
+; |elevador|next_andar~31      ; |elevador|next_andar~31      ; out              ;
+; |elevador|next_andar~32      ; |elevador|next_andar~32      ; out              ;
+; |elevador|next_andar~33      ; |elevador|next_andar~33      ; out              ;
+; |elevador|next_andar~34      ; |elevador|next_andar~34      ; out              ;
+; |elevador|next_andar~35      ; |elevador|next_andar~35      ; out              ;
+; |elevador|next_andar~36      ; |elevador|next_andar~36      ; out              ;
+; |elevador|next_andar~37      ; |elevador|next_andar~37      ; out              ;
+; |elevador|next_andar~38      ; |elevador|next_andar~38      ; out              ;
+; |elevador|next_andar~39      ; |elevador|next_andar~39      ; out              ;
+; |elevador|next_andar~40      ; |elevador|next_andar~40      ; out              ;
+; |elevador|next_andar~41      ; |elevador|next_andar~41      ; out              ;
+; |elevador|next_andar~42      ; |elevador|next_andar~42      ; out              ;
+; |elevador|next_andar~43      ; |elevador|next_andar~43      ; out              ;
+; |elevador|next_andar~44      ; |elevador|next_andar~44      ; out              ;
+; |elevador|next_andar~45      ; |elevador|next_andar~45      ; out              ;
+; |elevador|next_andar~46      ; |elevador|next_andar~46      ; out              ;
+; |elevador|next_andar~47      ; |elevador|next_andar~47      ; out              ;
+; |elevador|next_andar~48      ; |elevador|next_andar~48      ; out              ;
+; |elevador|next_andar~49      ; |elevador|next_andar~49      ; out              ;
+; |elevador|next_andar~50      ; |elevador|next_andar~50      ; out              ;
+; |elevador|next_andar~51      ; |elevador|next_andar~51      ; out              ;
+; |elevador|next_andar~52      ; |elevador|next_andar~52      ; out              ;
+; |elevador|next_andar~53      ; |elevador|next_andar~53      ; out              ;
+; |elevador|next_andar~54      ; |elevador|next_andar~54      ; out              ;
+; |elevador|next_andar~56      ; |elevador|next_andar~56      ; out              ;
+; |elevador|next_andar~57      ; |elevador|next_andar~57      ; out              ;
+; |elevador|next_andar~58      ; |elevador|next_andar~58      ; out              ;
+; |elevador|next_andar~59      ; |elevador|next_andar~59      ; out              ;
+; |elevador|next_andar~60      ; |elevador|next_andar~60      ; out              ;
+; |elevador|next_andar~61      ; |elevador|next_andar~61      ; out              ;
+; |elevador|next_andar~62      ; |elevador|next_andar~62      ; out              ;
+; |elevador|next_andar~63      ; |elevador|next_andar~63      ; out              ;
+; |elevador|next_andar~64      ; |elevador|next_andar~64      ; out              ;
+; |elevador|next_andar~65      ; |elevador|next_andar~65      ; out              ;
+; |elevador|next_andar~66      ; |elevador|next_andar~66      ; out              ;
+; |elevador|next_andar~67      ; |elevador|next_andar~67      ; out              ;
+; |elevador|next_andar~69      ; |elevador|next_andar~69      ; out              ;
+; |elevador|next_andar~70      ; |elevador|next_andar~70      ; out              ;
+; |elevador|next_andar~71      ; |elevador|next_andar~71      ; out              ;
+; |elevador|next_andar~72      ; |elevador|next_andar~72      ; out              ;
+; |elevador|next_andar~73      ; |elevador|next_andar~73      ; out              ;
+; |elevador|next_andar~74      ; |elevador|next_andar~74      ; out              ;
+; |elevador|next_andar~75      ; |elevador|next_andar~75      ; out              ;
+; |elevador|next_andar~76      ; |elevador|next_andar~76      ; out              ;
+; |elevador|next_andar~77      ; |elevador|next_andar~77      ; out              ;
+; |elevador|next_andar~78      ; |elevador|next_andar~78      ; out              ;
+; |elevador|next_andar~79      ; |elevador|next_andar~79      ; out              ;
+; |elevador|next_andar~80      ; |elevador|next_andar~80      ; out              ;
+; |elevador|next_andar~82      ; |elevador|next_andar~82      ; out              ;
+; |elevador|next_andar~83      ; |elevador|next_andar~83      ; out              ;
+; |elevador|next_andar~84      ; |elevador|next_andar~84      ; out              ;
+; |elevador|next_andar~85      ; |elevador|next_andar~85      ; out              ;
+; |elevador|next_andar~86      ; |elevador|next_andar~86      ; out              ;
+; |elevador|next_andar~87      ; |elevador|next_andar~87      ; out              ;
+; |elevador|next_andar~88      ; |elevador|next_andar~88      ; out              ;
+; |elevador|next_andar~89      ; |elevador|next_andar~89      ; out              ;
+; |elevador|next_andar~90      ; |elevador|next_andar~90      ; out              ;
+; |elevador|y[0]$latch         ; |elevador|y[0]$latch         ; out              ;
+; |elevador|call.andar0        ; |elevador|call.andar0        ; out              ;
+; |elevador|call.andar1        ; |elevador|call.andar1        ; out              ;
+; |elevador|call.andar2        ; |elevador|call.andar2        ; out              ;
+; |elevador|call.andar4        ; |elevador|call.andar4        ; out              ;
+; |elevador|call.andar5        ; |elevador|call.andar5        ; out              ;
+; |elevador|call.andar6        ; |elevador|call.andar6        ; out              ;
+; |elevador|n_andar.andar0     ; |elevador|n_andar.andar0     ; out              ;
+; |elevador|n_andar.andar1     ; |elevador|n_andar.andar1     ; out              ;
+; |elevador|n_andar.andar2     ; |elevador|n_andar.andar2     ; out              ;
+; |elevador|n_andar.andar3     ; |elevador|n_andar.andar3     ; out              ;
+; |elevador|n_andar.andar4     ; |elevador|n_andar.andar4     ; out              ;
+; |elevador|n_andar.andar5     ; |elevador|n_andar.andar5     ; out              ;
+; |elevador|n_andar.andar6     ; |elevador|n_andar.andar6     ; out              ;
+; |elevador|reset              ; |elevador|reset              ; out              ;
+; |elevador|andar_atual.andar0 ; |elevador|andar_atual.andar0 ; pin_out          ;
+; |elevador|andar_atual.andar1 ; |elevador|andar_atual.andar1 ; pin_out          ;
+; |elevador|andar_atual.andar2 ; |elevador|andar_atual.andar2 ; pin_out          ;
+; |elevador|andar_atual.andar3 ; |elevador|andar_atual.andar3 ; pin_out          ;
+; |elevador|andar_atual.andar4 ; |elevador|andar_atual.andar4 ; pin_out          ;
+; |elevador|andar_atual.andar5 ; |elevador|andar_atual.andar5 ; pin_out          ;
+; |elevador|andar_atual.andar6 ; |elevador|andar_atual.andar6 ; pin_out          ;
+; |elevador|y[0]               ; |elevador|y[0]               ; pin_out          ;
+; |elevador|y[1]               ; |elevador|y[1]               ; pin_out          ;
+; |elevador|y[2]               ; |elevador|y[2]               ; pin_out          ;
+; |elevador|y[3]               ; |elevador|y[3]               ; pin_out          ;
+; |elevador|y[4]               ; |elevador|y[4]               ; pin_out          ;
+; |elevador|y[5]               ; |elevador|y[5]               ; pin_out          ;
+; |elevador|y[6]               ; |elevador|y[6]               ; pin_out          ;
+; |elevador|y[7]               ; |elevador|y[7]               ; pin_out          ;
+; |elevador|y[8]               ; |elevador|y[8]               ; pin_out          ;
+; |elevador|y[9]               ; |elevador|y[9]               ; pin_out          ;
+; |elevador|y[10]              ; |elevador|y[10]              ; pin_out          ;
+; |elevador|y[11]              ; |elevador|y[11]              ; pin_out          ;
+; |elevador|y[12]              ; |elevador|y[12]              ; pin_out          ;
+; |elevador|y[13]              ; |elevador|y[13]              ; pin_out          ;
+; |elevador|y[14]              ; |elevador|y[14]              ; pin_out          ;
+; |elevador|y[15]              ; |elevador|y[15]              ; pin_out          ;
+; |elevador|y[16]              ; |elevador|y[16]              ; pin_out          ;
+; |elevador|y[17]              ; |elevador|y[17]              ; pin_out          ;
+; |elevador|y[18]              ; |elevador|y[18]              ; pin_out          ;
+; |elevador|y[19]              ; |elevador|y[19]              ; pin_out          ;
+; |elevador|y[20]              ; |elevador|y[20]              ; pin_out          ;
+; |elevador|y[21]              ; |elevador|y[21]              ; pin_out          ;
+; |elevador|y[22]              ; |elevador|y[22]              ; pin_out          ;
+; |elevador|y[23]              ; |elevador|y[23]              ; pin_out          ;
+; |elevador|y[24]              ; |elevador|y[24]              ; pin_out          ;
+; |elevador|y[25]              ; |elevador|y[25]              ; pin_out          ;
+; |elevador|y[26]              ; |elevador|y[26]              ; pin_out          ;
+; |elevador|y[27]              ; |elevador|y[27]              ; pin_out          ;
+; |elevador|y[28]              ; |elevador|y[28]              ; pin_out          ;
+; |elevador|y[29]              ; |elevador|y[29]              ; pin_out          ;
+; |elevador|y[30]              ; |elevador|y[30]              ; pin_out          ;
+; |elevador|y[31]              ; |elevador|y[31]              ; pin_out          ;
+; |elevador|pr_andar~1         ; |elevador|pr_andar~1         ; out0             ;
+; |elevador|Selector0~0        ; |elevador|Selector0~0        ; out0             ;
+; |elevador|Selector0~1        ; |elevador|Selector0~1        ; out0             ;
+; |elevador|Selector0~2        ; |elevador|Selector0~2        ; out0             ;
+; |elevador|Selector0~3        ; |elevador|Selector0~3        ; out0             ;
+; |elevador|Selector0~4        ; |elevador|Selector0~4        ; out0             ;
+; |elevador|Selector0~5        ; |elevador|Selector0~5        ; out0             ;
+; |elevador|Selector0~6        ; |elevador|Selector0~6        ; out0             ;
+; |elevador|pr_andar~9         ; |elevador|pr_andar~9         ; out0             ;
+; |elevador|Selector0~7        ; |elevador|Selector0~7        ; out0             ;
+; |elevador|Selector0~8        ; |elevador|Selector0~8        ; out0             ;
+; |elevador|Selector0~9        ; |elevador|Selector0~9        ; out0             ;
+; |elevador|Selector0~10       ; |elevador|Selector0~10       ; out0             ;
+; |elevador|Selector0~11       ; |elevador|Selector0~11       ; out0             ;
+; |elevador|Selector0~12       ; |elevador|Selector0~12       ; out0             ;
+; |elevador|Selector0~13       ; |elevador|Selector0~13       ; out0             ;
+; |elevador|Selector0~14       ; |elevador|Selector0~14       ; out0             ;
+; |elevador|Selector1~0        ; |elevador|Selector1~0        ; out0             ;
+; |elevador|Selector1~1        ; |elevador|Selector1~1        ; out0             ;
+; |elevador|Selector1~2        ; |elevador|Selector1~2        ; out0             ;
+; |elevador|Selector1~3        ; |elevador|Selector1~3        ; out0             ;
+; |elevador|Selector1~4        ; |elevador|Selector1~4        ; out0             ;
+; |elevador|Selector1~5        ; |elevador|Selector1~5        ; out0             ;
+; |elevador|Selector1~6        ; |elevador|Selector1~6        ; out0             ;
+; |elevador|Selector1~7        ; |elevador|Selector1~7        ; out0             ;
+; |elevador|Selector2~0        ; |elevador|Selector2~0        ; out0             ;
+; |elevador|Selector2~1        ; |elevador|Selector2~1        ; out0             ;
+; |elevador|Selector2~2        ; |elevador|Selector2~2        ; out0             ;
+; |elevador|Selector2~3        ; |elevador|Selector2~3        ; out0             ;
+; |elevador|Selector2~4        ; |elevador|Selector2~4        ; out0             ;
+; |elevador|Selector2~5        ; |elevador|Selector2~5        ; out0             ;
+; |elevador|Selector2~6        ; |elevador|Selector2~6        ; out0             ;
+; |elevador|Selector2~7        ; |elevador|Selector2~7        ; out0             ;
+; |elevador|Selector3~0        ; |elevador|Selector3~0        ; out0             ;
+; |elevador|Selector3~1        ; |elevador|Selector3~1        ; out0             ;
+; |elevador|Selector3~2        ; |elevador|Selector3~2        ; out0             ;
+; |elevador|Selector3~3        ; |elevador|Selector3~3        ; out0             ;
+; |elevador|Selector3~4        ; |elevador|Selector3~4        ; out0             ;
+; |elevador|Selector3~5        ; |elevador|Selector3~5        ; out0             ;
+; |elevador|Selector3~6        ; |elevador|Selector3~6        ; out0             ;
+; |elevador|Selector3~7        ; |elevador|Selector3~7        ; out0             ;
+; |elevador|Selector4~0        ; |elevador|Selector4~0        ; out0             ;
+; |elevador|Selector4~1        ; |elevador|Selector4~1        ; out0             ;
+; |elevador|Selector4~2        ; |elevador|Selector4~2        ; out0             ;
+; |elevador|Selector4~3        ; |elevador|Selector4~3        ; out0             ;
+; |elevador|Selector4~4        ; |elevador|Selector4~4        ; out0             ;
+; |elevador|Selector4~5        ; |elevador|Selector4~5        ; out0             ;
+; |elevador|Selector4~6        ; |elevador|Selector4~6        ; out0             ;
+; |elevador|Selector4~7        ; |elevador|Selector4~7        ; out0             ;
+; |elevador|Selector5~0        ; |elevador|Selector5~0        ; out0             ;
+; |elevador|Selector5~1        ; |elevador|Selector5~1        ; out0             ;
+; |elevador|Selector5~2        ; |elevador|Selector5~2        ; out0             ;
+; |elevador|Selector5~3        ; |elevador|Selector5~3        ; out0             ;
+; |elevador|Selector5~4        ; |elevador|Selector5~4        ; out0             ;
+; |elevador|Selector5~5        ; |elevador|Selector5~5        ; out0             ;
+; |elevador|Selector5~6        ; |elevador|Selector5~6        ; out0             ;
+; |elevador|Selector5~7        ; |elevador|Selector5~7        ; out0             ;
+; |elevador|Selector6~0        ; |elevador|Selector6~0        ; out0             ;
+; |elevador|Selector6~1        ; |elevador|Selector6~1        ; out0             ;
+; |elevador|Selector6~2        ; |elevador|Selector6~2        ; out0             ;
+; |elevador|Selector6~3        ; |elevador|Selector6~3        ; out0             ;
+; |elevador|Selector6~4        ; |elevador|Selector6~4        ; out0             ;
+; |elevador|Selector6~5        ; |elevador|Selector6~5        ; out0             ;
+; |elevador|Selector6~6        ; |elevador|Selector6~6        ; out0             ;
+; |elevador|Selector6~7        ; |elevador|Selector6~7        ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |elevador|pr_andar.andar1    ; |elevador|pr_andar.andar1    ; regout           ;
+; |elevador|pr_andar.andar2    ; |elevador|pr_andar.andar2    ; regout           ;
+; |elevador|pr_andar.andar3    ; |elevador|pr_andar.andar3    ; regout           ;
+; |elevador|pr_andar.andar4    ; |elevador|pr_andar.andar4    ; regout           ;
+; |elevador|pr_andar.andar5    ; |elevador|pr_andar.andar5    ; regout           ;
+; |elevador|next_andar~0       ; |elevador|next_andar~0       ; out              ;
+; |elevador|next_andar~1       ; |elevador|next_andar~1       ; out              ;
+; |elevador|next_andar~3       ; |elevador|next_andar~3       ; out              ;
+; |elevador|next_andar~4       ; |elevador|next_andar~4       ; out              ;
+; |elevador|next_andar~5       ; |elevador|next_andar~5       ; out              ;
+; |elevador|next_andar~6       ; |elevador|next_andar~6       ; out              ;
+; |elevador|next_andar~7       ; |elevador|next_andar~7       ; out              ;
+; |elevador|next_andar~8       ; |elevador|next_andar~8       ; out              ;
+; |elevador|next_andar~9       ; |elevador|next_andar~9       ; out              ;
+; |elevador|next_andar~10      ; |elevador|next_andar~10      ; out              ;
+; |elevador|next_andar~11      ; |elevador|next_andar~11      ; out              ;
+; |elevador|next_andar~12      ; |elevador|next_andar~12      ; out              ;
+; |elevador|pr_andar.andar6    ; |elevador|pr_andar.andar6    ; regout           ;
+; |elevador|y~0                ; |elevador|y~0                ; out              ;
+; |elevador|next_andar~13      ; |elevador|next_andar~13      ; out              ;
+; |elevador|next_andar~14      ; |elevador|next_andar~14      ; out              ;
+; |elevador|next_andar~16      ; |elevador|next_andar~16      ; out              ;
+; |elevador|next_andar~17      ; |elevador|next_andar~17      ; out              ;
+; |elevador|next_andar~18      ; |elevador|next_andar~18      ; out              ;
+; |elevador|next_andar~19      ; |elevador|next_andar~19      ; out              ;
+; |elevador|next_andar~20      ; |elevador|next_andar~20      ; out              ;
+; |elevador|next_andar~21      ; |elevador|next_andar~21      ; out              ;
+; |elevador|next_andar~22      ; |elevador|next_andar~22      ; out              ;
+; |elevador|next_andar~23      ; |elevador|next_andar~23      ; out              ;
+; |elevador|next_andar~24      ; |elevador|next_andar~24      ; out              ;
+; |elevador|next_andar~25      ; |elevador|next_andar~25      ; out              ;
+; |elevador|y[1]$latch         ; |elevador|y[1]$latch         ; out              ;
+; |elevador|next_andar~26      ; |elevador|next_andar~26      ; out              ;
+; |elevador|next_andar~27      ; |elevador|next_andar~27      ; out              ;
+; |elevador|next_andar~29      ; |elevador|next_andar~29      ; out              ;
+; |elevador|next_andar~30      ; |elevador|next_andar~30      ; out              ;
+; |elevador|next_andar~31      ; |elevador|next_andar~31      ; out              ;
+; |elevador|next_andar~32      ; |elevador|next_andar~32      ; out              ;
+; |elevador|next_andar~33      ; |elevador|next_andar~33      ; out              ;
+; |elevador|next_andar~34      ; |elevador|next_andar~34      ; out              ;
+; |elevador|next_andar~35      ; |elevador|next_andar~35      ; out              ;
+; |elevador|next_andar~36      ; |elevador|next_andar~36      ; out              ;
+; |elevador|next_andar~37      ; |elevador|next_andar~37      ; out              ;
+; |elevador|next_andar~38      ; |elevador|next_andar~38      ; out              ;
+; |elevador|next_andar~39      ; |elevador|next_andar~39      ; out              ;
+; |elevador|next_andar~40      ; |elevador|next_andar~40      ; out              ;
+; |elevador|next_andar~41      ; |elevador|next_andar~41      ; out              ;
+; |elevador|next_andar~42      ; |elevador|next_andar~42      ; out              ;
+; |elevador|next_andar~43      ; |elevador|next_andar~43      ; out              ;
+; |elevador|next_andar~44      ; |elevador|next_andar~44      ; out              ;
+; |elevador|next_andar~45      ; |elevador|next_andar~45      ; out              ;
+; |elevador|next_andar~46      ; |elevador|next_andar~46      ; out              ;
+; |elevador|next_andar~47      ; |elevador|next_andar~47      ; out              ;
+; |elevador|next_andar~48      ; |elevador|next_andar~48      ; out              ;
+; |elevador|next_andar~49      ; |elevador|next_andar~49      ; out              ;
+; |elevador|next_andar~50      ; |elevador|next_andar~50      ; out              ;
+; |elevador|next_andar~51      ; |elevador|next_andar~51      ; out              ;
+; |elevador|next_andar~52      ; |elevador|next_andar~52      ; out              ;
+; |elevador|next_andar~53      ; |elevador|next_andar~53      ; out              ;
+; |elevador|next_andar~54      ; |elevador|next_andar~54      ; out              ;
+; |elevador|next_andar~56      ; |elevador|next_andar~56      ; out              ;
+; |elevador|next_andar~57      ; |elevador|next_andar~57      ; out              ;
+; |elevador|next_andar~58      ; |elevador|next_andar~58      ; out              ;
+; |elevador|next_andar~59      ; |elevador|next_andar~59      ; out              ;
+; |elevador|next_andar~60      ; |elevador|next_andar~60      ; out              ;
+; |elevador|next_andar~61      ; |elevador|next_andar~61      ; out              ;
+; |elevador|next_andar~62      ; |elevador|next_andar~62      ; out              ;
+; |elevador|next_andar~63      ; |elevador|next_andar~63      ; out              ;
+; |elevador|next_andar~64      ; |elevador|next_andar~64      ; out              ;
+; |elevador|next_andar~65      ; |elevador|next_andar~65      ; out              ;
+; |elevador|next_andar~66      ; |elevador|next_andar~66      ; out              ;
+; |elevador|next_andar~67      ; |elevador|next_andar~67      ; out              ;
+; |elevador|next_andar~69      ; |elevador|next_andar~69      ; out              ;
+; |elevador|next_andar~70      ; |elevador|next_andar~70      ; out              ;
+; |elevador|next_andar~71      ; |elevador|next_andar~71      ; out              ;
+; |elevador|next_andar~72      ; |elevador|next_andar~72      ; out              ;
+; |elevador|next_andar~73      ; |elevador|next_andar~73      ; out              ;
+; |elevador|next_andar~74      ; |elevador|next_andar~74      ; out              ;
+; |elevador|next_andar~75      ; |elevador|next_andar~75      ; out              ;
+; |elevador|next_andar~76      ; |elevador|next_andar~76      ; out              ;
+; |elevador|next_andar~77      ; |elevador|next_andar~77      ; out              ;
+; |elevador|next_andar~78      ; |elevador|next_andar~78      ; out              ;
+; |elevador|next_andar~79      ; |elevador|next_andar~79      ; out              ;
+; |elevador|next_andar~80      ; |elevador|next_andar~80      ; out              ;
+; |elevador|next_andar~82      ; |elevador|next_andar~82      ; out              ;
+; |elevador|next_andar~83      ; |elevador|next_andar~83      ; out              ;
+; |elevador|next_andar~84      ; |elevador|next_andar~84      ; out              ;
+; |elevador|next_andar~85      ; |elevador|next_andar~85      ; out              ;
+; |elevador|next_andar~86      ; |elevador|next_andar~86      ; out              ;
+; |elevador|next_andar~87      ; |elevador|next_andar~87      ; out              ;
+; |elevador|next_andar~88      ; |elevador|next_andar~88      ; out              ;
+; |elevador|next_andar~89      ; |elevador|next_andar~89      ; out              ;
+; |elevador|next_andar~90      ; |elevador|next_andar~90      ; out              ;
+; |elevador|y[0]$latch         ; |elevador|y[0]$latch         ; out              ;
+; |elevador|call.andar0        ; |elevador|call.andar0        ; out              ;
+; |elevador|call.andar1        ; |elevador|call.andar1        ; out              ;
+; |elevador|call.andar2        ; |elevador|call.andar2        ; out              ;
+; |elevador|call.andar4        ; |elevador|call.andar4        ; out              ;
+; |elevador|call.andar5        ; |elevador|call.andar5        ; out              ;
+; |elevador|call.andar6        ; |elevador|call.andar6        ; out              ;
+; |elevador|n_andar.andar0     ; |elevador|n_andar.andar0     ; out              ;
+; |elevador|n_andar.andar1     ; |elevador|n_andar.andar1     ; out              ;
+; |elevador|n_andar.andar2     ; |elevador|n_andar.andar2     ; out              ;
+; |elevador|n_andar.andar3     ; |elevador|n_andar.andar3     ; out              ;
+; |elevador|n_andar.andar4     ; |elevador|n_andar.andar4     ; out              ;
+; |elevador|n_andar.andar5     ; |elevador|n_andar.andar5     ; out              ;
+; |elevador|n_andar.andar6     ; |elevador|n_andar.andar6     ; out              ;
+; |elevador|andar_atual.andar1 ; |elevador|andar_atual.andar1 ; pin_out          ;
+; |elevador|andar_atual.andar2 ; |elevador|andar_atual.andar2 ; pin_out          ;
+; |elevador|andar_atual.andar3 ; |elevador|andar_atual.andar3 ; pin_out          ;
+; |elevador|andar_atual.andar4 ; |elevador|andar_atual.andar4 ; pin_out          ;
+; |elevador|andar_atual.andar5 ; |elevador|andar_atual.andar5 ; pin_out          ;
+; |elevador|andar_atual.andar6 ; |elevador|andar_atual.andar6 ; pin_out          ;
+; |elevador|y[0]               ; |elevador|y[0]               ; pin_out          ;
+; |elevador|y[1]               ; |elevador|y[1]               ; pin_out          ;
+; |elevador|y[2]               ; |elevador|y[2]               ; pin_out          ;
+; |elevador|y[3]               ; |elevador|y[3]               ; pin_out          ;
+; |elevador|y[4]               ; |elevador|y[4]               ; pin_out          ;
+; |elevador|y[5]               ; |elevador|y[5]               ; pin_out          ;
+; |elevador|y[6]               ; |elevador|y[6]               ; pin_out          ;
+; |elevador|y[7]               ; |elevador|y[7]               ; pin_out          ;
+; |elevador|y[8]               ; |elevador|y[8]               ; pin_out          ;
+; |elevador|y[9]               ; |elevador|y[9]               ; pin_out          ;
+; |elevador|y[10]              ; |elevador|y[10]              ; pin_out          ;
+; |elevador|y[11]              ; |elevador|y[11]              ; pin_out          ;
+; |elevador|y[12]              ; |elevador|y[12]              ; pin_out          ;
+; |elevador|y[13]              ; |elevador|y[13]              ; pin_out          ;
+; |elevador|y[14]              ; |elevador|y[14]              ; pin_out          ;
+; |elevador|y[15]              ; |elevador|y[15]              ; pin_out          ;
+; |elevador|y[16]              ; |elevador|y[16]              ; pin_out          ;
+; |elevador|y[17]              ; |elevador|y[17]              ; pin_out          ;
+; |elevador|y[18]              ; |elevador|y[18]              ; pin_out          ;
+; |elevador|y[19]              ; |elevador|y[19]              ; pin_out          ;
+; |elevador|y[20]              ; |elevador|y[20]              ; pin_out          ;
+; |elevador|y[21]              ; |elevador|y[21]              ; pin_out          ;
+; |elevador|y[22]              ; |elevador|y[22]              ; pin_out          ;
+; |elevador|y[23]              ; |elevador|y[23]              ; pin_out          ;
+; |elevador|y[24]              ; |elevador|y[24]              ; pin_out          ;
+; |elevador|y[25]              ; |elevador|y[25]              ; pin_out          ;
+; |elevador|y[26]              ; |elevador|y[26]              ; pin_out          ;
+; |elevador|y[27]              ; |elevador|y[27]              ; pin_out          ;
+; |elevador|y[28]              ; |elevador|y[28]              ; pin_out          ;
+; |elevador|y[29]              ; |elevador|y[29]              ; pin_out          ;
+; |elevador|y[30]              ; |elevador|y[30]              ; pin_out          ;
+; |elevador|y[31]              ; |elevador|y[31]              ; pin_out          ;
+; |elevador|Selector0~1        ; |elevador|Selector0~1        ; out0             ;
+; |elevador|Selector0~2        ; |elevador|Selector0~2        ; out0             ;
+; |elevador|Selector0~3        ; |elevador|Selector0~3        ; out0             ;
+; |elevador|Selector0~4        ; |elevador|Selector0~4        ; out0             ;
+; |elevador|Selector0~5        ; |elevador|Selector0~5        ; out0             ;
+; |elevador|Selector0~6        ; |elevador|Selector0~6        ; out0             ;
+; |elevador|Selector0~7        ; |elevador|Selector0~7        ; out0             ;
+; |elevador|Selector0~8        ; |elevador|Selector0~8        ; out0             ;
+; |elevador|Selector0~9        ; |elevador|Selector0~9        ; out0             ;
+; |elevador|Selector0~10       ; |elevador|Selector0~10       ; out0             ;
+; |elevador|Selector0~11       ; |elevador|Selector0~11       ; out0             ;
+; |elevador|Selector0~12       ; |elevador|Selector0~12       ; out0             ;
+; |elevador|Selector0~13       ; |elevador|Selector0~13       ; out0             ;
+; |elevador|Selector0~14       ; |elevador|Selector0~14       ; out0             ;
+; |elevador|Selector1~0        ; |elevador|Selector1~0        ; out0             ;
+; |elevador|Selector1~1        ; |elevador|Selector1~1        ; out0             ;
+; |elevador|Selector1~2        ; |elevador|Selector1~2        ; out0             ;
+; |elevador|Selector1~3        ; |elevador|Selector1~3        ; out0             ;
+; |elevador|Selector1~4        ; |elevador|Selector1~4        ; out0             ;
+; |elevador|Selector1~5        ; |elevador|Selector1~5        ; out0             ;
+; |elevador|Selector1~6        ; |elevador|Selector1~6        ; out0             ;
+; |elevador|Selector1~7        ; |elevador|Selector1~7        ; out0             ;
+; |elevador|Selector2~0        ; |elevador|Selector2~0        ; out0             ;
+; |elevador|Selector2~1        ; |elevador|Selector2~1        ; out0             ;
+; |elevador|Selector2~2        ; |elevador|Selector2~2        ; out0             ;
+; |elevador|Selector2~3        ; |elevador|Selector2~3        ; out0             ;
+; |elevador|Selector2~4        ; |elevador|Selector2~4        ; out0             ;
+; |elevador|Selector2~5        ; |elevador|Selector2~5        ; out0             ;
+; |elevador|Selector2~6        ; |elevador|Selector2~6        ; out0             ;
+; |elevador|Selector2~7        ; |elevador|Selector2~7        ; out0             ;
+; |elevador|Selector3~0        ; |elevador|Selector3~0        ; out0             ;
+; |elevador|Selector3~1        ; |elevador|Selector3~1        ; out0             ;
+; |elevador|Selector3~2        ; |elevador|Selector3~2        ; out0             ;
+; |elevador|Selector3~3        ; |elevador|Selector3~3        ; out0             ;
+; |elevador|Selector3~4        ; |elevador|Selector3~4        ; out0             ;
+; |elevador|Selector3~5        ; |elevador|Selector3~5        ; out0             ;
+; |elevador|Selector3~6        ; |elevador|Selector3~6        ; out0             ;
+; |elevador|Selector3~7        ; |elevador|Selector3~7        ; out0             ;
+; |elevador|Selector4~0        ; |elevador|Selector4~0        ; out0             ;
+; |elevador|Selector4~1        ; |elevador|Selector4~1        ; out0             ;
+; |elevador|Selector4~2        ; |elevador|Selector4~2        ; out0             ;
+; |elevador|Selector4~3        ; |elevador|Selector4~3        ; out0             ;
+; |elevador|Selector4~4        ; |elevador|Selector4~4        ; out0             ;
+; |elevador|Selector4~5        ; |elevador|Selector4~5        ; out0             ;
+; |elevador|Selector4~6        ; |elevador|Selector4~6        ; out0             ;
+; |elevador|Selector4~7        ; |elevador|Selector4~7        ; out0             ;
+; |elevador|Selector5~0        ; |elevador|Selector5~0        ; out0             ;
+; |elevador|Selector5~1        ; |elevador|Selector5~1        ; out0             ;
+; |elevador|Selector5~2        ; |elevador|Selector5~2        ; out0             ;
+; |elevador|Selector5~3        ; |elevador|Selector5~3        ; out0             ;
+; |elevador|Selector5~4        ; |elevador|Selector5~4        ; out0             ;
+; |elevador|Selector5~5        ; |elevador|Selector5~5        ; out0             ;
+; |elevador|Selector5~6        ; |elevador|Selector5~6        ; out0             ;
+; |elevador|Selector5~7        ; |elevador|Selector5~7        ; out0             ;
+; |elevador|Selector6~0        ; |elevador|Selector6~0        ; out0             ;
+; |elevador|Selector6~1        ; |elevador|Selector6~1        ; out0             ;
+; |elevador|Selector6~2        ; |elevador|Selector6~2        ; out0             ;
+; |elevador|Selector6~3        ; |elevador|Selector6~3        ; out0             ;
+; |elevador|Selector6~4        ; |elevador|Selector6~4        ; out0             ;
+; |elevador|Selector6~5        ; |elevador|Selector6~5        ; out0             ;
+; |elevador|Selector6~6        ; |elevador|Selector6~6        ; out0             ;
+; |elevador|Selector6~7        ; |elevador|Selector6~7        ; out0             ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Sep 09 17:43:13 2013
+Info: Command: quartus_sim --simulation_results_format=VWF elevador -c elevador
+Info: Using vector source file "Y:/Dropbox/Lab. CD II/Praticas/elevador/Waveform.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       4.48 %
+Info: Number of transitions in simulation is 77
+Info: Vector file elevador.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 183 megabytes
+    Info: Processing ended: Mon Sep 09 17:43:14 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
